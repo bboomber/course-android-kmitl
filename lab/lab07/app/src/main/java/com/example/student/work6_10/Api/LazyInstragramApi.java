@@ -1,0 +1,13 @@
+package com.example.student.work6_10.Api;
+
+import com.example.student.work6_10.UserProfile;
+
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
+
+public interface LazyInstragramApi {
+    String BASE_URL = "https://us-central1-retrofit-course.cloudfunctions.net";
+    @GET("/getProfile")
+    Call<UserProfile>  getProfile(@Query("user") String userName);
+}
